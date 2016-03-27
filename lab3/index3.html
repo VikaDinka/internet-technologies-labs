@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> Script_01 </title>
+</head>
+<body>
+<script language="JavaScript">
+
+  var v_1 = 15, u_1 = "2", c;
+  c = v_1 + u_1;
+  c = c - v_1;
+  for(var i = 0; i < 10; i++) {
+    if (i % 2 == 0) {
+      document.writeln("HELLO");
+    } else {
+      switch (i) {
+        case 1:
+          document.writeln("CC = " + c + i + "; ");
+          break;
+        case 5:
+          document.writeln("AA = " + c + i + "; ");
+          break;
+        case 7:
+          document.writeln("BB = " + c + i + "; ");
+          break;
+        default:
+          document.writeln("c  = " + c + i + "; ");
+      }
+    }
+  }
+</script>
+</body>
+</html>
