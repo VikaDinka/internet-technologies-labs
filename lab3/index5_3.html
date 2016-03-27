@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Броузер</title>
+</head>
+<body bgcolor="#fff0ff">
+<center>
+  <table border=1 width="50%">
+    <script language="JavaScript">
+      var a = 1, b = 3, n = 8;
+
+      var min = 10000, xmin = -1, max = -1, xmax = -1;
+      function f(x) {
+        return Math.sqrt(2.5 + Math.abs(Math.cos(x)) * x * x);
+      }
+
+      for(var i = 0; i <= n; i++) {
+        var h = (b - a) / n;
+        var x = a + i * h;
+        var fx = f(x);
+        if (fx < min) {
+          min = fx;
+          xmin = x;
+        }
+        if (fx > max) {
+          max = fx;
+          xmax = x;
+        }
+        document.write("<tr><td>" + i + "</td><td>" + x + "</td><td>" + fx + "</td></tr>");
+      }
+      document.write("<tr><td>MIN</td><td>" + xmin + "</td><td>" + min + "</td></tr>");
+      document.write("<tr><td>MAX</td><td>" + xmax + "</td><td>" + max + "</td></tr>");
+    </script>
+  </table>
+<center>
+</body>
+</html>
